@@ -15,6 +15,4 @@ services:
     env_file:
       - gcs_helper.env
     volumes:
-      - type: bind
-        source: $HOME/.config/gcloud/application_default_credentials.json
-        target: /etc/google-creds.json
+      - $HOME/.config/gcloud/application_default_credentials.json:/etc/google-creds.json
